@@ -1,0 +1,62 @@
+[
+    {"id": 100,
+      "parent": 0,
+      "url": "",
+      "name": "Folder1",
+      "isFolder": 1
+    },
+    {"id": 101,
+      "parent": 0,
+      "url": "https://telex.hu/",
+      "name": "Telex",
+      "isFolder": 0
+    },
+    {"id": 102,
+      "parent": 100,
+      "url": "",
+      "name": "Folder",
+      "isFolder": 1
+    },
+    {"id": 107,
+      "parent": 104,
+      "url": "",
+      "name": "Folder3",
+      "isFolder": 1
+    },
+    {"id": 104,
+      "parent": 100,
+      "url": "",
+      "name": "Folder",
+      "isFolder": 1
+    },
+    {"id": 106,
+      "parent": 0,
+      "url": "",
+      "name": "Folder2",
+      "isFolder": 1
+    },
+    {"id": 108,
+      "parent": 107,
+      "url": "",
+      "name": "Link",
+      "isFolder": 0
+    },
+    {"id": 103,
+      "parent": 100,
+      "url": "https://emmertarmin.github.io/",
+      "name": "Github pages",
+      "isFolder": 0
+    },
+    {"id": 105,
+      "parent": 104,
+      "url": "https://telex.hu/",
+      "name": "Telex",
+      "isFolder": 0
+    },
+    {"id": 109,
+      "parent": 107,
+      "url": "",
+      "name": "Link",
+      "isFolder": 0
+    }
+]

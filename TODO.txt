@@ -1,0 +1,16 @@
+Generate json
+    might warrant some testing, but for now it's set up
+
+Somehow explain all the features with a "help" button
+
+differentiate currently opened folders?
+
+iframe to preview websites
+
+Customize links and folders
+    Shift+Click?
+    It should be easier to rename folders than to migrate children and delete
+    
+dragging currently open folder bugs out
+
+disable closing tab if unsaved changes

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Tab</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script><!-- jQuery prototyping -->
+	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> jQuery production -->
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> prototyping -->
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script> production -->
+	<script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+
+	<div id="container">
+	</div>
+
+	<div id="hidden" style="display: none"></div>
+
+	<footer>
+		<div id="downloadColumn">
+			<a id="downloadAnchorElem">Save</a>
+		</div>
+		<div id="catch" class="item" draggable="true">
+			<input type="text" id="newName" placeholder="Name" value="" onfocus="entering()" onblur="leaving()" />
+			<input type="text" id="newLink" placeholder="URL" value="" onfocus="entering()" onblur="leaving()" />
+		</div>
+		<div id="delete" class="item">
+			<div>Delete</div>
+		</div>
+	</footer>
+	
+	<template id="column">
+		<div class="column"></div>
+	</template>
+
+	<template id="link">
+		<a class="item" draggable="true" href="">Link</a>
+	</template>
+
+	<template id="folder">
+		<div class="item" draggable="true">Folder</a>
+	</template>
+
+
+	
+</body>
+</html>
