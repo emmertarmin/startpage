@@ -232,10 +232,10 @@ function openFolder(id) {
 |                      Export Button                   |
 \_____________________________________________________*/
 function generateExport(json) {
-	let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(json, null, '\t'));
+	let dataStr = "data:text/json;charset=utf-8,let config = `" + encodeURIComponent(JSON.stringify(json, null, '\t') + "`;");
 	let dlAnchorElem = document.querySelector('#downloadAnchorElem');
 	dlAnchorElem.setAttribute("href",     dataStr     );
-	dlAnchorElem.setAttribute("download", "linklist.json");
+	dlAnchorElem.setAttribute("download", "linklist.js");
 }
 
 /* __________________________________________________
@@ -345,23 +345,15 @@ function assemble() {
 \___________________________________________________*/
 $( document ).ready(function() {
 	
-	let getter = $.getJSON("linklist.json", function(json) {});
-	getter.fail(function() {
-		let json = JSON.parse('[{"id":100,"parent":0,"url":"","name":"Folder","isFolder":1},{"id":101,"parent":0,"url":"#","name":"Link","isFolder":0}]');
-		generateExport(json);
-		buildSite(json);
-	});
-	getter.done(function(json) {
+	let json = JSON.parse(config);
 
-		originalJSON = json;
+	originalJSON = json;
 
-		// generate downloadable link to save changes
-		generateExport(json);
+	// generate downloadable link to save changes
+	generateExport(json);
 
-		// build the website with anticipation that a new json structure changes it
-		buildSite(json);
-
-	});
+	// build the website with anticipation that a new json structure changes it
+	buildSite(json);
 
 	$( "#delete" ).mousedown(function() {
 		$( "#newName" ).val("");
