@@ -14,6 +14,7 @@
 }
 body {
 	font-family: Roboto, Arial, Cortana;
+	font-size: 14px;
 }
 
 [draggable] {
@@ -35,22 +36,28 @@ body {
 
 #container .item {
 	display: block;
-	margin: 20px 0;
-	padding: 0.5rem;
+	margin: 5px 0;
+	padding: 0.2rem 0.5rem;
 	background-color: #5f5f5f;
 	color: white;
 	user-select: none;
+	line-height: 1.5rem;
+	font-weight: bold;
+	overflow-wrap: anywhere;
+	cursor: pointer;
 }
 
 #container a.item {
 	background-color: #494f5f;
+	color: #b8d6ec;
+	text-decoration: none;
 }
 
 .column {
     width: 200px;
     background:  #353535;
     margin: 20px 0 20px 20px;
-	padding: 0 20px;
+	padding: 15px 20px;
 	min-height: 2rem;
 	display: none;
 }
