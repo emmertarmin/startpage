@@ -190,6 +190,8 @@ function leaving(){
 |                      Handle Clicking on Folders                   |
 \__________________________________________________________________*/
 function closeFolder(id, animation=true) {
+	let folder = document.querySelector("#id" + id);
+	folder.classList.remove("open");
 	let el = document.querySelector("#col" + id);
 	el.querySelectorAll(".item").forEach(item => {
 		document.querySelectorAll(".active").forEach(active => {
@@ -216,6 +218,7 @@ function openFolder(id) {
 		closeFolder(id, true);
 		return;
 	}
+	folder.classList.add("open");
 	[...folder.parentNode.children].forEach(child => {
 		if ( child === folder ) return;
 		let unrelatedFolder = document.querySelector("#col" + child.id.substr(2));

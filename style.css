@@ -53,6 +53,11 @@ body {
 	text-decoration: none;
 }
 
+#container .item.open {
+	background-color: #837b75;
+	color: #cec4ba;
+}
+
 .column {
     width: 200px;
     background:  #353535;
