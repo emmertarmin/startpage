@@ -153,16 +153,18 @@ document.addEventListener("drop", function( event ) {
 		valid = true;
 	}
 
-	// Finally if it's a folder being dropped, instantly create and show subfolder
+	// Finally if it's a new folder being dropped, instantly create and show subfolder
 	if ( valid && !dragged.href ) {
-		let clone = document.querySelector("#column").content.cloneNode(true);
 		let id_num = Number(dragged.id.substr(2));
-		clone.children[0].id = "col" + id_num;
-		container.appendChild(clone);
-		document.querySelector("#id" + id_num).addEventListener('click', event => {
+		if ( !document.getElementById("col" + id_num) ) {
+			let clone = document.querySelector("#column").content.cloneNode(true);
+			clone.children[0].id = "col" + id_num;
+			container.appendChild(clone);
+			document.querySelector("#id" + id_num).addEventListener('click', event => {
+				openFolder(id_num);
+			});
 			openFolder(id_num);
-		});
-		openFolder(id_num);
+		}
 	}
 
 	assemble();
