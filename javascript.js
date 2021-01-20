@@ -349,8 +349,14 @@ function assemble() {
 |                      Initialize                    |
 \___________________________________________________*/
 $( document ).ready(function() {
+
+	let json;
+	if ( typeof(config) == 'undefined' ) {
+		json = JSON.parse('[{"id":100,"parent":0,"url":"","name":"Folder","isFolder":1},{"id":101,"parent":0,"url":"#","name":"Link","isFolder":0}]');
+	} else {
+		json = JSON.parse(config);
+	}
 	
-	let json = JSON.parse(config);
 
 	originalJSON = json;
 
@@ -364,6 +370,16 @@ $( document ).ready(function() {
 		$( "#newName" ).val("");
 		$( "#newLink" ).val("");
 	});
-	
+
+	// Display random link from pool in header
+	let links = [];
+	json.forEach(el => {
+		if ( !el.isFolder ) links.push(el);
+	});
+	const random = Math.floor(Math.random() * links.length);
+	let randomLink = document.querySelector("#random");
+	randomLink.innerHTML = links[random].name + " | " + links[random].url;
+	randomLink.href = links[random].url;
+
 });	
 
