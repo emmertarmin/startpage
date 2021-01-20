@@ -24,6 +24,7 @@ body {
 
 header {
 	display: flex;
+	height: 15px;
 }
 
 header a {
@@ -33,6 +34,7 @@ header a {
 	font-size: 80%;
 	font-weight: bold;
 	text-decoration: none;
+	line-height: 15px;
 }
 
 #container {
@@ -43,7 +45,7 @@ header a {
 	align-items: flex-start;
 	align-content: flex-start;
 	margin-bottom: 150px;
-	min-height: calc(100vh - 150px);
+	min-height: calc(100vh - 165px);
 }
 
 #container .item {
